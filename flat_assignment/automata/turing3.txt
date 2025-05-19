@@ -1,0 +1,8 @@
+q0
+q1
+q0, a, q1, a, R
+q0, b, q1, b, R
+q0, #, q1, #, R
+q1, a, q0, a, L
+q1, b, q0, b, L
+q1, #, q0, #, L
