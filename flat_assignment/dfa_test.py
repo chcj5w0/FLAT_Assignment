@@ -57,9 +57,9 @@ def load_dfa(file_path):
     path = os.path.join('automata', file_path)
     with open(path) as f:
         lines = f.readlines()
-        init_state = lines[0].strip()
-        final_states = [s.strip() for s in lines[1].split(',')]
-        dfa = DFA(init_state, final_states)
+        init_state = lines[0].strip() # Initial state 첫번째 줄
+        final_states = [s.strip() for s in lines[1].split(',')] # Final states 두번째 줄
+        dfa = DFA(init_state, final_states) # DFA 객체 생성
         for line in lines[2:]:
             tokens = line.strip().split(',')
             dfa.add_transition(tokens[0].strip(), tokens[1].strip()[0], tokens[2].strip())
