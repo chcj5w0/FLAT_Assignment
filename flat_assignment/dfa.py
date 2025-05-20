@@ -37,4 +37,11 @@ class DFA:
     #Complete the method which returns True if the dfa accepts the input,
     #or returns False otherwise.
     def accept(self, input):
+        #Process the input string and get the final state.
+        final_state = self.process(input)
+        #Check if the final state is in the final states.
+        if final_state in self.final_states:
+            return True
+        else:
+            return False
         
